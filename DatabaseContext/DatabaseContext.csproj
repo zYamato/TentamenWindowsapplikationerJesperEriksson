@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D770397F-A535-4637-A75F-298F9A2898C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatabaseContext</RootNamespace>
+    <AssemblyName>DatabaseContext</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FestivalContext.cs" />
+    <Compile Include="Migrations\202005271145317_Initial.cs" />
+    <Compile Include="Migrations\202005271145317_Initial.designer.cs">
+      <DependentUpon>202005271145317_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005271332032_AddedSeats.cs" />
+    <Compile Include="Migrations\202005271332032_AddedSeats.designer.cs">
+      <DependentUpon>202005271332032_AddedSeats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005271407165_ChangedSeatToShowID.cs" />
+    <Compile Include="Migrations\202005271407165_ChangedSeatToShowID.designer.cs">
+      <DependentUpon>202005271407165_ChangedSeatToShowID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005271442414_AddedSeatsToTicket.cs" />
+    <Compile Include="Migrations\202005271442414_AddedSeatsToTicket.designer.cs">
+      <DependentUpon>202005271442414_AddedSeatsToTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005272012473_testMigration.cs" />
+    <Compile Include="Migrations\202005272012473_testMigration.designer.cs">
+      <DependentUpon>202005272012473_testMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005272028059_addData.cs" />
+    <Compile Include="Migrations\202005272028059_addData.designer.cs">
+      <DependentUpon>202005272028059_addData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005280702491_AddedSeatsToRequiredInTickets.cs" />
+    <Compile Include="Migrations\202005280702491_AddedSeatsToRequiredInTickets.designer.cs">
+      <DependentUpon>202005280702491_AddedSeatsToRequiredInTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281102072_AddedSeatsToShow.cs" />
+    <Compile Include="Migrations\202005281102072_AddedSeatsToShow.designer.cs">
+      <DependentUpon>202005281102072_AddedSeatsToShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281256059_changesHasBeenMade.cs" />
+    <Compile Include="Migrations\202005281256059_changesHasBeenMade.designer.cs">
+      <DependentUpon>202005281256059_changesHasBeenMade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281340301_testing.cs" />
+    <Compile Include="Migrations\202005281340301_testing.designer.cs">
+      <DependentUpon>202005281340301_testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005281828131_addSeatNums.cs" />
+    <Compile Include="Migrations\202005281828131_addSeatNums.designer.cs">
+      <DependentUpon>202005281828131_addSeatNums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291152291_ChangedTicketShowId.cs" />
+    <Compile Include="Migrations\202005291152291_ChangedTicketShowId.designer.cs">
+      <DependentUpon>202005291152291_ChangedTicketShowId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291153513_AddBackTicket.cs" />
+    <Compile Include="Migrations\202005291153513_AddBackTicket.designer.cs">
+      <DependentUpon>202005291153513_AddBackTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291219501_AddedMovieIdToTicket.cs" />
+    <Compile Include="Migrations\202005291219501_AddedMovieIdToTicket.designer.cs">
+      <DependentUpon>202005291219501_AddedMovieIdToTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291238479_testMigration1.cs" />
+    <Compile Include="Migrations\202005291238479_testMigration1.designer.cs">
+      <DependentUpon>202005291238479_testMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291246529_Reverse.cs" />
+    <Compile Include="Migrations\202005291246529_Reverse.designer.cs">
+      <DependentUpon>202005291246529_Reverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291250271_changedMovieToMovieId.cs" />
+    <Compile Include="Migrations\202005291250271_changedMovieToMovieId.designer.cs">
+      <DependentUpon>202005291250271_changedMovieToMovieId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291315207_addedMovieBackToShows.cs" />
+    <Compile Include="Migrations\202005291315207_addedMovieBackToShows.designer.cs">
+      <DependentUpon>202005291315207_addedMovieBackToShows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291357162_addedWheelChairToTicket.cs" />
+    <Compile Include="Migrations\202005291357162_addedWheelChairToTicket.designer.cs">
+      <DependentUpon>202005291357162_addedWheelChairToTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005291533374_AddedStartTimeToTicket.cs" />
+    <Compile Include="Migrations\202005291533374_AddedStartTimeToTicket.designer.cs">
+      <DependentUpon>202005291533374_AddedStartTimeToTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005271145317_Initial.resx">
+      <DependentUpon>202005271145317_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005271332032_AddedSeats.resx">
+      <DependentUpon>202005271332032_AddedSeats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005271407165_ChangedSeatToShowID.resx">
+      <DependentUpon>202005271407165_ChangedSeatToShowID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005271442414_AddedSeatsToTicket.resx">
+      <DependentUpon>202005271442414_AddedSeatsToTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005272012473_testMigration.resx">
+      <DependentUpon>202005272012473_testMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005272028059_addData.resx">
+      <DependentUpon>202005272028059_addData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005280702491_AddedSeatsToRequiredInTickets.resx">
+      <DependentUpon>202005280702491_AddedSeatsToRequiredInTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281102072_AddedSeatsToShow.resx">
+      <DependentUpon>202005281102072_AddedSeatsToShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281256059_changesHasBeenMade.resx">
+      <DependentUpon>202005281256059_changesHasBeenMade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281340301_testing.resx">
+      <DependentUpon>202005281340301_testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281828131_addSeatNums.resx">
+      <DependentUpon>202005281828131_addSeatNums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291152291_ChangedTicketShowId.resx">
+      <DependentUpon>202005291152291_ChangedTicketShowId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291153513_AddBackTicket.resx">
+      <DependentUpon>202005291153513_AddBackTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291219501_AddedMovieIdToTicket.resx">
+      <DependentUpon>202005291219501_AddedMovieIdToTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291238479_testMigration1.resx">
+      <DependentUpon>202005291238479_testMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291246529_Reverse.resx">
+      <DependentUpon>202005291246529_Reverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291250271_changedMovieToMovieId.resx">
+      <DependentUpon>202005291250271_changedMovieToMovieId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291315207_addedMovieBackToShows.resx">
+      <DependentUpon>202005291315207_addedMovieBackToShows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291357162_addedWheelChairToTicket.resx">
+      <DependentUpon>202005291357162_addedWheelChairToTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005291533374_AddedStartTimeToTicket.resx">
+      <DependentUpon>202005291533374_AddedStartTimeToTicket.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackEnd\BackEnd.csproj">
+      <Project>{810f7c31-ac5e-4433-8e3b-9b39421983ed}</Project>
+      <Name>BackEnd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
